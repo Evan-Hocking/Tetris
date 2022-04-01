@@ -1,0 +1,203 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+}
+.navbar li{
+    float: left;
+}
+#right li{float: right;}
+
+.navbar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar li a:hover{
+    background-color: #111;
+}
+.main {
+    background-image: url("tetris.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 95vh;
+    overflow: hidden;
+    background-size: 95%;
+}
+.content {
+    background-color: #c7c7c7;
+    box-shadow: 5px 5px black;
+    object-position: center;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 10px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    min-width: 500px;
+}
+#tetris-bg {
+    width: 300px;
+    height: 600px;
+    background-image: url("tetris-grid-bg.png");
+    background-size: 300px 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#tetris-bg div{
+    height: 28px;
+    width: 28px;
+    margin: 1px;
+}
+
+.pieces {
+    background-color: blue;
+}
+.rpiece{
+    background-color: #5a65ad;
+}
+.lpiece{
+    background-color: #ef7921;
+}
+.zpiece{
+    background-color: #ef2029;
+}
+.spiece{
+    background-color: #42b642;
+}
+.tpiece{
+    background-color: #ad4d9c;
+}
+.opiece{
+    background-color: #f7d308;
+}
+.ipiece{
+    background-color: #31c7ef;
+}
+
+
+    
+#start-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+.alert-danger{
+    color: red;
+}
+.content-tetris {
+    background-color: #c7c7c7;
+    box-shadow: 10px 10px black;
+    object-position: center;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 5px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#ScoreCard{
+    font-size: 16px;
+    font-weight: bold;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    float: left;
+}
+table, th, td {
+    border: 1px solid;
+  }
+table {
+    border-collapse: collapse;
+    border-spacing: 2px;
+}   
+table th{
+    background-color: blue;
+}
+#top-right{
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    background-color: blue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.GameOver{
+    text-align: center;
+}
+.GameOver h1{
+    font-size: 45px;
+}
+.GameOver h2{
+    font-size: 25px;
+}
+#finalScore{
+    color: #5a65ad;
+}
+input{
+    display: inline-block;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+label{
+    font-weight: bold;
+}
+td, th {
+    padding: 5px;
+    min-width: 100px;
+    text-align: center;
+}
+th p{
+    color: white;
+    
+}
+button{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: black;
+}

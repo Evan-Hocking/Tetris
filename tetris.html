@@ -1,0 +1,59 @@
+<?php
+    session_start();
+    if ($_GET["logout"]==1){
+        unset($_SESSION["username"]);
+    }
+    
+    if(isset($_SESSION["username"])){
+        $username = $_SESSION["username"];
+    }else{
+        $username = null;
+    }
+    
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Play Tetris</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div class = "navbar">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <div id="right">
+                        <?php
+                            if ($username){
+                                echo "<li><a href='tetris.php?logout=1'>Logout</a></li>";
+                            }else{
+                                echo "<li><a href='index.php'>Login</a></li>";
+                            }
+                        ?>
+                        <li><a href="tetris.php">Play Tetris</a></li>
+                        <li><a href="leaderboard.php">Leaderboard</a></li>
+                    </div>
+                </ul>
+            </div>
+            <?php
+                if($username){
+                    echo "<p id='top-right'>Logged in as: <scan id='user'>". $username . "</scan></p>";
+                }else{
+                    echo "<p id='top-right'>Log in to save scores</p>";
+                }
+            ?>
+            <div class="content-tetris">
+                <?php
+                include("game.php");
+                ?>
+            </div>
+            <div id="GameOverScreen">
+                <?php
+                include"Gameover.php";
+                ?>
+            </div>
+        </div>
+    </body>
+</html>
